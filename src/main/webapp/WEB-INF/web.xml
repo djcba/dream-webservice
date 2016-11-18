@@ -4,14 +4,13 @@
          version="2.5">
 
   <!--不加这句话的话项目启动默认首页为index，删除index.jsp也行-->
-  <!--springmvc是不需要ContextLoaderListener来加载管理bean的。
-    DispatcherServlet它有自己的容器，主要用于加载除控制器层的bean,DispatcherServlet属于子容器。
-    ContextLoaderListener是spring管理bean的父容器，ContextLoaderListener一般用于加载非控制器层的bean。
+  <!--springmvc是不需要ContextLoaderListener来加载管理bean的，DispatcherServlet它有自己的容器，主要用于加载除控制器层的bean,DispatcherServlet属于子容器。
+    cxf需要ContextLoaderListener，cxf需要ContextLoaderListener是spring管理bean的父容器，一般用于加载非控制器层的bean。
     子容器可以访问父容器中的bean，而父容器不能访问子容器。
-    你可以吧基本web请求的controller等这些bean放到spring-web.xml中，
-    让DispatcherServlet去加载管理其中的bean。
-    把webservice相关的bean配置到另外一个xml文件中,比如spring-webservice.xml,
-    让ContextLoaderListener去加载管理spring-webservice.xml中的bean，这样算是在两个不同的容器当中，就互不影响了。
+    可以把基本web请求的controller等这些bean放到spring-web.xml中，让DispatcherServlet去加载管理spring-web.xml。
+    把webservice相关配置到另外一个xml文件中,比如spring-webservice.xml,
+    让ContextLoaderListener去加载管理spring-webservice.xml和其他spring文件（）spring-mysql.xml,spring-jpa.xml等），
+    这样，就互不影响了。
   -->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

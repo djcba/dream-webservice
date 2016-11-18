@@ -11,8 +11,6 @@
     <!--<import resource="classpath:META-INF/cxf/cxf.xml" />
     <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />-->
-
-
     <!--发布webservice-->
     <!-- WebService的实现Bean定义 -->
     <!--web.xml配置了webservice的访问路径/server/*，那么/server/web-publish?wsdl就是该webservice的访问路径-->
@@ -22,5 +20,4 @@
                     implementor="#webserviceServer"  address="/web-publish" >
     </jaxws:endpoint>
     <!--发布webservice-->
-
 </beans>

@@ -7,8 +7,6 @@ import javax.jws.WebService;
  */
 @WebService
 public interface MyWebService {
-
     int add(int a, int b);
     int minus(int a, int b);
-
 }

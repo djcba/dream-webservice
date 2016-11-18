@@ -12,7 +12,6 @@ import java.net.URL;
  * Created by DuLida on 2016/11/14.
  */
 public class MyClient {
-
     public static void main(String args[]) {
         try {
             URL url = new URL("http://localhost:8888/ms?wsdl");
@@ -26,5 +25,4 @@ public class MyClient {
             e.printStackTrace();
         }
     }
-
 }
